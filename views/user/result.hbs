@@ -1,0 +1,67 @@
+<section>
+    
+
+
+
+    <div class="center_reault">
+        <div class="heading">
+        <h2 class="head">{{result.[0].Name}}</h2>
+        <h5 class="head">{{result.[0].Place}}</h5>
+
+    </div>
+        <div class="">
+            <table class="table table-borderless  d-flex justify-content-evenly">
+                <tbody>
+                     <tr>
+                        <th scope="row">Mobile Number = {{result.[0].Phone}}</th>
+                        
+                        <th scope="row">Total Mark = {{result.[0].Score}}</th>
+                        
+                        <th scope="row">Rank = {{result.[0].Rank}}</th>
+                        
+                        
+                    </tr>
+                </tbody>
+  
+            </table>
+            <br>
+
+            
+                <h4 style="text-align: center;">Your Day Wise Mark</h4>
+            <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Quiz Number</th>
+                        <th scope="col">Timestamp</th>
+                        <th scope="col">Mark</th>
+                        {{!-- <th scope="col"></th> --}}
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each result}}
+                    <tr>
+                        <th scope="row">{{this.quiz}}</th>
+                        <td>{{this.Timestamp}}</td>
+                        <td>{{this.Score}}</td>
+                        
+                        {{!-- <td><a href="/show_answers"  class="btn btn-danger">Show My Answers</a></td> --}}
+                        
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            
+            </div>
+            
+            <div class="d-flex justify-content-evenly">
+                <a href="/" style="background-color: brown; color: cornsilk;" class="btn">Check another</a>
+            </div>
+
+        </div>
+        
+    </div>
+
+    </body>
+</section>
