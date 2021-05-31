@@ -11,8 +11,15 @@ router.get('/', function(req, res, next) {
 router.post('/serch',async(req,res)=>{
   
   let result=await reSultHelper.getResult(req.body)
-
-  res.render('user/result',{result})
+  
+  let total=0
+   for(i=0;i<result.length;i++){
+   
+    total=total+result[i].Score
+  
+   }
+   console.log(total)
+  res.render('user/result',{result,total})
 })
 router.get('/show_answers',(req,res)=>{
   res.render('user/answers')

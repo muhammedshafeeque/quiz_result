@@ -15,9 +15,9 @@
                      <tr>
                         <th scope="row">Mobile Number = {{result.[0].Phone}}</th>
                         
-                        <th scope="row">Total Mark = {{result.[0].Score}}</th>
+                        <th scope="row">Total Mark = {{total}}</th>
                         
-                        <th scope="row">Rank = {{result.[0].Rank}}</th>
+                        {{!-- <th scope="row">Rank = {{result.[0].Rank}}</th> --}}
                         
                         
                     </tr>
@@ -35,6 +35,7 @@
                         <th scope="col">Quiz Number</th>
                         <th scope="col">Timestamp</th>
                         <th scope="col">Mark</th>
+                        <th scope="col">Maximum Mark</th>
                         {{!-- <th scope="col"></th> --}}
                         
                     </tr>
@@ -45,7 +46,7 @@
                         <th scope="row">{{this.quiz}}</th>
                         <td>{{this.Timestamp}}</td>
                         <td>{{this.Score}}</td>
-                        
+                        <td>5</td>
                         {{!-- <td><a href="/show_answers"  class="btn btn-danger">Show My Answers</a></td> --}}
                         
                     </tr>
