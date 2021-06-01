@@ -1,34 +1,40 @@
 <section>
-    
+
+    <div class="container">
 
 
+        <div class="center_reault">
+            <div class="heading">
+                <h2 class="head">{{result.[0].Name}}</h2>
+                <h5 class="head">{{result.[0].Place}}</h5>
 
-    <div class="center_reault">
-        <div class="heading">
-        <h2 class="head">{{result.[0].Name}}</h2>
-        <h5 class="head">{{result.[0].Place}}</h5>
+            </div>
+            {{!-- <div class="person">
+                <h5 class="personaldata">Mobile Number: {{result.[0].Phone}}</h5>
+                <h5 class="personaldata">Total Mark: {{total}}</h5>
 
-    </div>
-        <div class="">
+            </div> --}}
             <table class="table table-borderless  d-flex justify-content-evenly">
                 <tbody>
-                     <tr>
-                        <th scope="row">Mobile Number = {{result.[0].Phone}}</th>
-                        
-                        <th scope="row">Total Mark = {{total}}</th>
-                        
+                    <tr>
+                        <th scope="row">Mobile Number: {{result.[0].Phone}}</th>
+
+                        <th scope="row">Total Mark: {{total}}</th>
+
                         {{!-- <th scope="row">Rank = {{result.[0].Rank}}</th> --}}
-                        
-                        
+
+
                     </tr>
                 </tbody>
-  
+
             </table>
+
             <br>
 
-            
-                <h4 style="text-align: center;">Your Day Wise Mark</h4>
-            <div>
+
+            <h4 style="text-align: center;">Your Day Wise Mark</h4>
+        </div>
+        <div class="col-">
             <table class="table">
                 <thead>
                     <tr>
@@ -37,7 +43,7 @@
                         <th scope="col">Mark</th>
                         <th scope="col">Maximum Mark</th>
                         {{!-- <th scope="col"></th> --}}
-                        
+
                     </tr>
                 </thead>
                 <tbody>
@@ -47,22 +53,23 @@
                         <td>{{this.Timestamp}}</td>
                         <td>{{this.Score}}</td>
                         <td>5</td>
-                        {{!-- <td><a href="/show_answers"  class="btn btn-danger">Show My Answers</a></td> --}}
-                        
+                        {{!-- <td><a href="/show_answers" class="btn btn-danger">Show My Answers</a></td> --}}
+
                     </tr>
                     {{/each}}
                 </tbody>
             </table>
-            
-            </div>
-            
-            <div class="d-flex justify-content-evenly">
-                <a href="/" style="background-color: brown; color: cornsilk;" class="btn">Check another</a>
-            </div>
 
         </div>
-        
-    </div>
 
-    </body>
+        <div class="d-flex justify-content-evenly">
+            <a href="/" style="background-color: brown; color: cornsilk;" class="btn">Check another</a>
+        </div>
+
+
+
+
+
+
+    </div>
 </section>
