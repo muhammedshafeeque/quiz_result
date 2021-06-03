@@ -12,6 +12,13 @@ module.exports={
            
            resolve(result)
         })
+    },
+    answers:(quizId)=>{
+        return new Promise(async(resolve,reject)=>{
+            let answers = await db.get().collection(collection.QUIZ_COLLECTION).findOne({_id:objectId(quizId)})
+            resolve(answers)
+        })
+
     }
 
 }

@@ -9,11 +9,7 @@
                 <h5 class="head">{{result.[0].Place}}</h5>
 
             </div>
-            {{!-- <div class="person">
-                <h5 class="personaldata">Mobile Number: {{result.[0].Phone}}</h5>
-                <h5 class="personaldata">Total Mark: {{total}}</h5>
-
-            </div> --}}
+           
             <table class="table table-borderless  d-flex justify-content-evenly">
                 <tbody>
                     <tr>
@@ -31,7 +27,7 @@
 
             <br>
 
-
+        {{!-- score table --}}
             <h4 style="text-align: center;">Your Day Wise Mark</h4>
         </div>
         <div class="col-">
@@ -39,10 +35,10 @@
                 <thead>
                     <tr>
                         <th scope="col">Quiz Number</th>
-                        <th scope="col">Timestamp</th>
+                        
                         <th scope="col">Mark</th>
                         <th scope="col">Maximum Mark</th>
-                        {{!-- <th scope="col"></th> --}}
+                        <th scope="col"></th>
 
                     </tr>
                 </thead>
@@ -50,10 +46,9 @@
                     {{#each result}}
                     <tr>
                         <th scope="row">{{this.quiz}}</th>
-                        <td>{{this.Timestamp}}</td>
                         <td>{{this.Score}}</td>
                         <td>5</td>
-                        {{!-- <td><a href="/show_answers" class="btn btn-danger">Show My Answers</a></td> --}}
+                        <td><a href="/show_answers/{{this._id}}" class="btn btn-danger">Answers</a></td>
 
                     </tr>
                     {{/each}}

@@ -3,28 +3,28 @@
 
 
 
-    <div class="center_reault">
+    <div class="container">
         <div class="heading">
-        <h2 class="head">Quiz Number:</h2>
+        <h2 class="head">Quiz Number:{{answer.quiz}}</h2>
 
     </div>
+    <div>
         <div class="">
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">Question</th>
-                        <th scope="col">Your Answer</th>
-                        
-                        
-                        
+                        <th scope="col">Your Answer</th>     
                     </tr>
                 </thead>
                 <tbody>
+                    {{#each questions}}
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
+                        <td >{{this.q}}</th>
+                        <td>{{this.a}}</td>
                         
                     </tr>
+                    {{/each}}
                 </tbody>
             </table>
             
@@ -32,12 +32,13 @@
             
             <div class="d-flex justify-content-evenly">
                 <a href="/" style="background-color: brown; color: cornsilk;" class="btn">Check another Person</a>
-                <a href="/" style="background-color: brown; color: cornsilk;" class="btn">Check another Quizz</a>
+                <form action="/serch" method="POST">
+                <input name="Mobile" value="{{answer.Phone}}" hidden>
+                <button type="submit" style="background-color: brown; color: cornsilk;" class="btn">Check another Quizz</button>
+                </form>
             </div>
 
         </div>
         
     </div>
-
-    </body>
 </section>
